@@ -53,3 +53,7 @@ This is a Flask-based web application that uses the OpenAI API to generate text-
 To use the application, follow the installation and usage instructions provided in the documentation.
 
 Please note that this application is intended for educational and experimental purposes only. The use of the OpenAI API is subject to the OpenAI terms of service, and users should be aware of any applicable usage limits or restrictions.
+
+## Note
+
+You have to replace api key with your working key to see the output.
