@@ -4,6 +4,12 @@
 
 This is a simple Flask-based web application that uses the OpenAI API to generate text-based responses to user prompts. The application provides a web interface that allows users to input a prompt or question, and the ChatGPT model generates a response based on the input.
 
+
+
+https://user-images.githubusercontent.com/101336955/236869124-2017df8e-2ca2-4f10-b8de-bf6e692b70c1.mp4
+
+
+
 ### Prerequisites
 
 To run this application, you will need the following:
