@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-port-lligat-sans: "Port Lligat Sans";
+  --font-poppins: Poppins;
+  --font-oxanium: Oxanium;
+
+  /* font sizes */
+  --font-size-11xl: 30px;
+  --font-size-6xl: 25px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #fff;
+
+  /* Gaps */
+  --gap-27xl: 46px;
+
+  /* Paddings */
+  --padding-31xl: 50px;
+  --padding-51xl: 70px;
+}

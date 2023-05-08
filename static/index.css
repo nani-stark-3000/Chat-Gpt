@@ -1,0 +1,184 @@
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-up {
+  0% {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.chatgpt {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 100%;
+  font-weight: 700;
+  font-family: inherit;
+  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  cursor: default;
+  opacity: 0;
+}
+.chatgpt.animate,
+.enter-any-question.animate {
+  animation: 1s ease 0s 1 normal forwards slide-in-top;
+}
+.enter-any-question,
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.enter-any-question {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 100%;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  width: 1268px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+  cursor: default;
+  opacity: 0;
+}
+.header {
+  align-self: stretch;
+  flex-direction: column;
+  gap: 5px;
+}
+.input,
+.submit {
+  position: relative;
+}
+.input {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.38);
+  align-self: stretch;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+  height: 56px;
+  flex-shrink: 0;
+  opacity: 1;
+  font-size: x-large;
+}
+.input.animate {
+  animation: 1s ease 0s 1 normal forwards scale-up;
+}
+.submit {
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-port-lligat-sans);
+  color: var(--color-white);
+  text-align: center;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 5px 20px;
+  background-color: transparent;
+  border-radius: 60px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7) 0.01%,
+    rgba(255, 0, 0, 0.7)
+  );
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.button.animate {
+  animation: 1s ease 0s 1 normal forwards slide-in-top;
+}
+.the-midjourney-bot {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-port-lligat-sans);
+}
+.home {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 200px 100px var(--padding-31xl);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-27xl);
+  background-image: url(./public/home@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 1003px;
+  text-align: center;
+  font-size: 124px;
+  color: var(--color-white);
+  font-family: var(--font-oxanium);
+}
+@media screen and (max-width: 1200px) {
+  .chatgpt {
+    font-size: 125px;
+  }
+  .home {
+    height: auto;
+    min-height: 888px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .chatgpt {
+    font-size: 90px;
+  }
+  .enter-any-question {
+    font-size: 15px;
+  }
+  .input {
+    height: 40px;
+  }
+  .submit,
+  .the-midjourney-bot {
+    font-size: var(--font-size-6xl);
+  }
+  .home {
+    height: auto;
+    gap: var(--gap-27xl);
+    padding-left: var(--padding-51xl);
+    padding-top: 150px;
+    padding-right: var(--padding-51xl);
+    box-sizing: border-box;
+    min-height: 888px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .chatgpt {
+    font-size: 60px;
+  }
+  .enter-any-question {
+    font-size: 10px;
+  }
+  .input {
+    height: 30px;
+  }
+  .submit,
+  .the-midjourney-bot {
+    font-size: var(--font-size-xl);
+  }
+  .home {
+    height: auto;
+    padding-left: var(--padding-31xl);
+    padding-right: var(--padding-31xl);
+    box-sizing: border-box;
+    min-height: 750px;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="static/global.css" />
+    <link rel="stylesheet" href="static/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Port Lligat Sans:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <form action="/" method="post">
+    <main class="home">
+      <div class="header">
+        <h1 class="chatgpt" data-animate-on-scroll>ChatGpt</h1>
+        <h4 class="enter-any-question" data-animate-on-scroll>
+          Enter any Question Or Prompt Hear
+        </h4>
+      </div>
+      <input
+        class="input"
+        type="text"
+        name="prompt"
+        placeholder="Hello....!"
+        data-animate-on-scroll
+      />
+      <button class="button" data-animate-on-scroll>
+        <div class="submit">SUBMIT</div>
+      </button>
+    </form>
+      {% if answer!=undefined %}
+        <div class="the-midjourney-bot" id="demo"></div>
+        <script>
+          var i = 0;
+          var speed = 100;
+
+          function typeWriter() {
+            var txt = '{{answer}}';
+            if (i < txt.length) {
+              document.getElementById("demo").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+          typeWriter();
+        </script>
+      {% endif %}
+    </main>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
